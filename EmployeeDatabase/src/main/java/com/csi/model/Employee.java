@@ -2,6 +2,8 @@ package com.csi.model;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -29,6 +31,7 @@ public class Employee {
 	private long empUID;
 	private String empPANCardNumber;
 	private double empSalary;
+	@JsonFormat(pattern="dd-MM-yyyy")
 	private Date empJoiningDate;
 	private boolean empStatus;
 
