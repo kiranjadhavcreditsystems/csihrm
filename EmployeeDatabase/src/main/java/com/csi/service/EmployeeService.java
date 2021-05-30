@@ -11,4 +11,7 @@ public interface EmployeeService {
 	public void saveEmployeeData(Employee employee);
 	
 	public boolean login(String empEmail, String password);
+	
+	public List<Employee> getEmployeeData(Employee employee);
+
 }

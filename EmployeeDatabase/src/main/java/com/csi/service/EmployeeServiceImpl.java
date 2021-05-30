@@ -7,10 +7,12 @@ import org.springframework.stereotype.Service;
 
 import com.csi.dao.EmployeeDao;
 import com.csi.model.Employee;
+
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
-     @Autowired
-     EmployeeDao employeeDaoImpl;
+	@Autowired
+	EmployeeDao employeeDaoImpl;
+
 	@Override
 	public List<Employee> getAllData() {
 		// TODO Auto-generated method stub
@@ -27,5 +29,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public boolean login(String empEmail, String password) {
 		// TODO Auto-generated method stub
 		return employeeDaoImpl.login(empEmail, password);
+	}
+
+	@Override
+	public List<Employee> getEmployeeData(Employee employee) {
+		return employeeDaoImpl.getEmployeeData(employee);
 	}
 }

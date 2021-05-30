@@ -35,6 +35,12 @@ public class EmployeeController {
 		return employeeServiceImpl.login(empEmail, empPassword);
 	}
 	
+	@PostMapping("/hrmdirectory")
+	public List<Employee> getEmployeeData(@RequestBody Employee employee){
+		return employeeServiceImpl.getEmployeeData(employee);
+		
+	}
+	
 	
 
 }

@@ -11,7 +11,7 @@ public interface EmployeeDao{
 	
 	public boolean login(String empEmail, String password);
 	
-	
+	public List<Employee> getEmployeeData(Employee employee);
 	
 	
 	
